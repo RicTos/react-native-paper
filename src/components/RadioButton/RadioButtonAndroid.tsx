@@ -41,6 +41,7 @@ export type Props = $RemoveChildren<typeof TouchableRipple> & {
    * testID to be used on tests.
    */
   testID?: string;
+  disableRipple?: boolean;
 };
 
 const BORDER_WIDTH = 2;
@@ -68,6 +69,7 @@ const RadioButtonAndroid = ({
   value,
   status,
   testID,
+  disableRipple,
   ...rest
 }: Props) => {
   const theme = useInternalTheme(themeOverrides);
@@ -132,6 +134,7 @@ const RadioButtonAndroid = ({
           <TouchableRipple
             {...rest}
             borderless
+            disabled={disableRipple}
             rippleColor={rippleColor}
             onPress={
               disabled

@@ -39,6 +39,7 @@ export type Props = {
    * testID to be used on tests.
    */
   testID?: string;
+  disableRipple?: boolean;
 };
 
 /**
